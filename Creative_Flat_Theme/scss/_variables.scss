@@ -1,0 +1,39 @@
+$arvo: 'Arvo-Regular';
+$mont-bold: 'montserrat-bold';
+$mont-reg: 'Montserrat-Regular';
+$open-sans-it: 'Open-Sans-Italic';
+$open-sans-light: 'Open-Sans-Light';
+$open-sans-semi: 'Open-Sans-SemiBold';
+$open-sans-reg: 'OpenSans-Regular';
+$raleway-semi: 'raleway-semiBold';
+$raleway-reg: 'Raleway-Regular';
+$arial-black: 'Arial-Black';
+
+@function size($size) {
+    $screen: 1920;
+    @return($size / $screen)*100vw;
+}
+
+@mixin scale($width, $diff: 'less') {
+    $behaviour: max-width;
+    $screen-width: $width;
+
+    @if ($diff == 'less') {
+        $screen-width: $width - 1px;
+    }
+    @if ($diff == 'self-above') {
+        $behaviour: min-width;
+    }
+
+    @media screen and (#{$behaviour}: $screen-width) {
+        @content;
+    }
+}
+
+$header-background: #f70135;
+$second-header-background:#ffce45;
+$brand-background: #2c3e50;
+$heading-secondary-color: #879cb0;
+$work-green: #08b250;
+$work-blue: #098ce5;
+$work-violet: #9a22cd;

@@ -1,0 +1,28 @@
+{
+  "name": "homework_9",
+  "version": "1.0.0",
+  "description": "secondary maket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgeyasivakova/sivakova.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evgeyasivakova/sivakova/issues"
+  },
+  "homepage": "https://github.com/evgeyasivakova/sivakova#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.12.0"
+  }
+}

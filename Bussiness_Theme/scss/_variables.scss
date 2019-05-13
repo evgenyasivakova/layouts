@@ -1,0 +1,53 @@
+$gotham: 'GothamPro-Black';
+$lato_bold: 'Lato-Bold';
+$lato: 'Lato-Regular';
+$open_sans: 'OpenSans-Regular';
+$lato_light: 'Lato-Light';
+$grotesqu: 'BrandonGrotesqu';
+
+@function size($size) {
+    $screen: 1366;
+    @return($size / $screen)*100vw;
+}
+
+@mixin scale($width, $diff: 'less') {
+    $behaviour: max-width;
+    $screen-width: $width;
+
+    @if ($diff == 'less') {
+        $screen-width: $width - 1px;
+    }
+    @if ($diff == 'self-above') {
+        $behaviour: min-width;
+    }
+
+    @media screen and (#{$behaviour}: $screen-width) {
+        @content;
+    }
+}
+
+$brand_orange: #ffbb42;
+
+$heading_color: #394b50;
+$brand_blue: #709dca;
+$input_padding: 18px;
+$input_icon_size: 41px;
+$input_line_height: 1;
+$input_font_size: 10px;
+$dot_active_color: #1ca8dd;
+$dot_color: #dedfe0;
+
+$icon_color_blue:  $brand_blue;
+$icon_hover_color: #f89b64;
+
+$brand_light_orange: #ffc155;
+$border_button_about: #e7ad48;
+
+$cards_background_color: #e7edf3;
+$card_main_color: #818b95;
+$card_main_border_color: #ccd5df;
+$card_main_background_color: #ffffff;
+$price_orange: $brand_orange;
+$main_list_color:  #ccd5df;
+$card_special_background_color: $brand_blue;
+$spesial_list_color: #c2e1ff;
